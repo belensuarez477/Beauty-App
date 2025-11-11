@@ -16,7 +16,6 @@
             "outputPath": "dist/BeautySystempageFront",
             "index": "src/index.html",
             "main": "src/main.ts",
-            "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
@@ -38,7 +37,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "aot": true,
               "extractLicenses": true,
@@ -70,12 +68,15 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "buildTarget": "BeautySystempageFront:build"
+          },
           "configurations": {
             "production": {
-              "browserTarget": "BeautySystempageFront:build:production"
+              "buildTarget": "BeautySystempageFront:build:production"
             },
             "development": {
-              "browserTarget": "BeautySystempageFront:build:development"
+              "buildTarget": "BeautySystempageFront:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +84,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "BeautySystempageFront:build"
+            "buildTarget": "BeautySystempageFront:build"
           }
         },
         "test": {
