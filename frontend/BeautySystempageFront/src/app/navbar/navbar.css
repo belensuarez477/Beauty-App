@@ -1,54 +1,54 @@
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: rgb(255, 253, 253);
-  padding: 1rem 2rem;
+  background-color: #377741;
   display: flex;
+  justify-content: space-between; 
   align-items: center;
-  justify-content: space-between;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  z-index: 10;
-  box-sizing: border-box;
+  width: 100%;
+  box-sizing: border-box; 
+  margin-bottom:  3rem;
+  height: 200px;
 }
 
-.brand {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #444;
-  font-family: 'Poppins', sans-serif;
-}
-
-.menu {
+.navbar ul {
   list-style: none;
   display: flex;
-  gap: 1rem;
-  margin: 0;
-  padding: 0;
+  gap: 40px;
+}
+.navbar a {
+  font-size: 3rem;
+  color:antiquewhite;
+  text-decoration: none;
 }
 
-.buttonInicioSesion,
-.buttonRegistrarse {
-  background-color: white;
-  border: 1px solid #ffd6e0;
-  border-radius: 8px;
-  padding: 0.5rem 1rem;
-  font-size: 0.9rem;
-  color: #333;
+.navbar a.router-link-active,
+.navbar a.router-link-exact-active {
+  color:antiquewhite; 
+  font-weight: bold;   
+}
+
+.btn-InicioSesion,
+.btn-Registrarse,
+.btn-Contactos {
+  color:antiquewhite;
   cursor: pointer;
-  transition: all 0.3s ease;
+  font-size: large;
+  font-weight: bold;
+  margin-right: 20px;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
-.buttonInicioSesion:hover,
-.buttonRegistrarse:hover {
-  background-color: #ffc4cd;
-  color: white;
+.navbar h1{
+    color: antiquewhite;
+    margin-left: 30px;
+    font-size: 3rem;
 }
+.contenido {
+  flex: 1; 
+  padding: 20px;
+}
+
+
+.navbar a.activo {
+  border-bottom: 3px solid antiquewhite; }
