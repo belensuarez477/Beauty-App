@@ -1,5 +1,5 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule, RouterOutlet } from '@angular/router';
 import { Home } from "./home/home";
 import { Navbar } from "./navbar/navbar";
 import { Footer } from "./component/footer/footer";
@@ -9,7 +9,7 @@ import { Contactanos } from "./formularios/contactanos/contactanos";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Home, Navbar, Footer, InicioSesion, Registrarse, Contactanos],
+  imports: [ RouterModule,RouterOutlet, Home, Navbar, Footer, InicioSesion, Registrarse, Contactanos],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
