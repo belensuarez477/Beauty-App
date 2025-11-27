@@ -1,0 +1,68 @@
+.section {
+  /* Fondo con degradado suave entre antiquewhite y verde pastel */
+  background: linear-gradient(135deg, #faebd7, #b0f2c2);
+  padding: 8rem 2rem;
+}
+
+.section h2 {
+  color: #377741; /* verde bosque para títulos */
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+.section p {
+  text-align: center;
+  color: #0c0c0c; /* texto oscuro para contraste */
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 3rem;
+  margin-top: 3rem;
+  /* Fondo transparente para que solo destaquen las cards */
+  background-color: transparent;
+}
+
+.benefit-card { 
+  background-color: #ffffff; /* fondo limpio en las cards */
+  border: 2px solid #d69d22; /* borde dorado mostaza como acento */
+  padding: 2.5rem 2rem;
+  border-radius: 25px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.benefit-card:hover {
+  background: linear-gradient(135deg, #ffffff, #faebd7); /* degradado sutil en hover */
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.benefit-card h3 {
+  color: #377741; /* verde bosque para títulos dentro de cards */
+  margin-bottom: 1rem;
+  font-size: 3.5rem; /* un poco más compacto */
+  font-weight: bold;
+}
+
+.benefit-card p {
+  color: #555; /* gris medio para texto secundario */
+  line-height: 1.6;
+  font-size: 2.2rem; /* más equilibrado */
+}
+
+.benefit-icon {
+  font-size: 2rem;
+  color: #d69d22; /* dorado mostaza como acento */
+  margin-bottom: 1rem;
+}

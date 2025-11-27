@@ -12,18 +12,21 @@ body {
   width: 100%; 
 }
 
-
 app-root {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
+
 .container {
   max-width: 1200px;
   margin: auto;
   width: 100%;
   padding: 0 1rem;
 }
+
+4-diseño-y-creacion-del-homepage
+
 
 .form-wrapper {
   min-height: 100vh; 
@@ -140,3 +143,4 @@ form a:hover {
     max-width: 500px; 
   }
 }
+main
