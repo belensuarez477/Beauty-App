@@ -9,80 +9,70 @@ body {
 }
 
 
+
 h2 {
   text-align: center;
-  color: antiquewhite;
-  margin-bottom: 1rem;
+  font-size: 3rem;       /* ✔ grande estilo PC */
+  color: rgba(255, 253, 249, 0.984);
+  margin-bottom: 2rem;
 }
 
 
+
 form {
-  background-color: #000000; 
-  padding: 2rem;
-  border-radius: 10px;
-  max-width: 400px;
-  width: 100%; 
+  background-color: #000000;
+  padding: 2.8rem;
+  border-radius: 14px;
+  width: 100%;
+  max-width: 1250px;     /* ✔ tamaño ideal para PC */
   margin: 0 auto;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
 }
 
 
 form label {
   display: block;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
   font-weight: bold;
-  color: #333; 
+  color: #fff9f9;
+  font-size: 3rem; 
 }
 
 
 form input[type="text"],
 form input[type="email"],
-form input[type="tel"],
+form input[type="telefono"],
 form input[type="password"],
 form textarea {
   width: 100%;
-  padding: 0.8rem;
+  padding: 2rem;
   margin-bottom: 1rem;
-  border: 1px solid #ccc;
+  border: 1px solid #1a1818;
   border-radius: 6px;
   background-color: #ffffff; 
-  font-size: 1rem;
+  font-size: 1.5rem;
   resize: vertical; 
 }
 
-/* Checkbox */
-form input[type="checkbox"] {
-  margin-right: 0.5rem;
-}
 
 
 form button {
   width: 100%;
   padding: 0.8rem;
-  background-color: #4B5320; 
+  background-color: #377741; 
   color: antiquewhite;
   border: none;
   border-radius: 6px;
-  font-size: 1.2rem;
+  font-size: 2.1rem;
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 form button:hover {
-  background-color: #3a4218; 
+  background-color:#377741; 
 }
 
-
-form a {
-  display: block;
-  margin-top: 1rem;
-  text-align: center;
-  color: #4B5320;
-  text-decoration: none;
-  font-size: 0.9rem;
-}
-
-form a:hover {
-  text-decoration: underline;
-}
