@@ -1,0 +1,103 @@
+.hero {
+  padding: 6rem 2rem;
+ background-color: transparent; /* antes tenías amarillo pastel */
+  padding: 8rem 2rem;
+  color: #fff;
+  margin-bottom: 5rem;
+  overflow: hidden;
+}
+
+.hero .container {
+  display: flex;
+  align-items: center;          /* centra verticalmente */
+  justify-content: space-between; /* texto a la izquierda, imagen a la derecha */
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-text {
+  flex: 1;
+  text-align: left;
+}
+
+.hero-text h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  color: rgb(6, 6, 6);
+  /* quitamos nowrap y overflow para que no se corte ni se desplace */
+}
+
+.hero-text p {
+  max-width: 600px;
+  margin-bottom: 3rem;
+  font-size: 1.2rem;
+  opacity: 0.9;
+  line-height: 1.6;
+  color: black;
+  /* también sin nowrap */
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background:lightgray;
+  color: #152e0e;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  animation: pulse 2s infinite;
+}
+
+.cta-btn:hover {
+  background: #164624;
+  color:antiquewhite;
+  transform: scale(1.05);
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end; /* imagen al margen derecho */
+  animation: slideInRight 1.2s ease-out;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  background-color: rgba(255,255,255,0.1);
+}
+
+/* Animaciones */
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(100px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(255,255,255,0.7); }
+  70% { box-shadow: 0 0 0 15px rgba(255,255,255,0); }
+  100% { box-shadow: 0 0 0 0 rgba(255,255,255,0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text {
+    margin-bottom: 2rem;
+  }
+
+  .hero-image {
+    justify-content: center;
+    animation: fadeIn 1s ease-out;
+  }
+}

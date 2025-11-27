@@ -6,10 +6,11 @@ import { Footer } from "./component/footer/footer";
 import { InicioSesion } from "./formularios/inicio-sesion/inicio-sesion";
 import { Registrarse } from "./formularios/registrarse/registrarse";
 import { Contactanos } from "./formularios/contactanos/contactanos";
+import { ComoFunciona } from './como-funciona/como-funciona';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Home, Navbar, Footer, InicioSesion, Registrarse, Contactanos],
+  imports: [RouterOutlet, Home, Navbar, Footer, InicioSesion, Registrarse, Contactanos,ComoFunciona],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

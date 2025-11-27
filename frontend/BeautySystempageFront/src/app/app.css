@@ -1,4 +1,12 @@
-
+.body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4fdf6;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 .navbar {
   background-color: #377741;
   padding: 15px;
