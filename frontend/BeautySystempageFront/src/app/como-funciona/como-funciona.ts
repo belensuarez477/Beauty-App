@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-como-funciona',
+  standalone: true,
   imports: [RouterOutlet],
   templateUrl: './como-funciona.html',
   styleUrl: './como-funciona.css',
