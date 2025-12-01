@@ -1,25 +1,30 @@
-4-diseño-y-creacion-del-homepage
 <nav class="navbar">
+  <!-- Marca -->
   <a class="navbar-brand" routerLink="/">Beauty System</a>
-  
-  <button class="mobile-menu-btn" (click)="toggleMenu()">☰</button>
   
   <div class="navbar-menu" [class.active]="isMenuOpen">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" routerLink="/" routerLinkActive="active">Inicio</a>
+        <a class="nav-link" 
+           routerLink="/" 
+           routerLinkActive="active" 
+           [routerLinkActiveOptions]="{ exact: true }">
+          Inicio
+        </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/contactanos" routerLinkActive="active">Contáctanos</a>
+        <a class="nav-link" 
+           routerLink="/contactanos" 
+           routerLinkActive="active">
+          Contáctanos
+        </a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item auth-buttons">
         <a class="btn-outline-light" 
            routerLink="/inicio-sesion" 
            routerLinkActive="active">
           Iniciar Sesión
         </a>
-      </li>
-      <li class="nav-item">
         <a class="btn-outline-light" 
            routerLink="/registrarse" 
            routerLinkActive="active">
@@ -29,19 +34,3 @@
     </ul>
   </div>
 </nav>
-
-<header>
-  <nav class="navbar">
-    <div class="logo">
-      <h1>Beauty System</h1>
-    </div>
-
-    <ul>
-      <li><a routerLink="/" routerLinkActive="active">Inicio</a></li>
-      <li><a routerLink="/inicio-sesion" routerLinkActive="active">Iniciar sesión</a></li>
-      <li><a routerLink="/registrarse" routerLinkActive="active">Registrarse</a></li>
-      <li><a routerLink="/contactanos" routerLinkActive="active">Contáctanos</a></li>
-    </ul>
-  </nav>
-</header>
- main
