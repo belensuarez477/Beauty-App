@@ -1,93 +1,162 @@
-.navbar {
-  display: flex;
-  justify-content: flex-start; /* logo a la izquierda */
-  align-items: center;
-}
+/* =========================
+   HERO
+========================= */
 
-.navbar-brand {
-  margin-right: auto; /* logo queda fijo a la izquierda */
-}
-
-.navbar-menu {
-  display: flex;
-  margin-left: auto; /* menú se va a la derecha */
-}
-
-.navbar-nav {
-  display: flex;
-  gap: 1rem;
-}
-
-.nav-link, .btn-outline-light {
-  border: 2px solid var(--primary);
-  color: var(--primary);
-  background-color: transparent;
-  border-radius: var(--border-radius);
-  padding: 0.75rem 1.5rem;
-  transition: var(--transition);
-  font-weight: 600;
-  font-size: 1rem;
-  text-decoration: none;
-  display: inline-block;
+.hero {
   text-align: center;
-  min-width: 120px;
+  padding: 6rem 2rem;
+  background: linear-gradient(
+    135deg,
+    var(--primary) 0%,
+    var(--primary-dark) 100%
+  );
+  color: rgb(246, 245, 244);
+  border-radius: 0;
+  margin-bottom: 4rem; height: 350px;
 }
 
-.nav-link:hover, .btn-outline-light:hover {
-  background-color: var(--primary);
+.hero h1 {
   color: var(--white);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(55, 119, 65, 0.25);
-}
-
-.nav-link.active, .btn-outline-light.active {
-  background-color: var(--primary);
-  color: var(--white);
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 1.5rem;
   font-weight: 700;
 }
 
-.mobile-menu-btn {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  color: var(--primary);
-  cursor: pointer;
+.hero p {
+  max-width: 600px;
+  margin: 0 auto 3rem;
+  color: var(--white);
+  font-size: 1.1rem; /* corregido */
+  opacity: 0.9;
+  line-height: 1.6;
+  
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .navbar {
-    padding: 1rem;
-    flex-wrap: wrap;
-  }
-  
-  .mobile-menu-btn {
-    display: block;
-  }
-  
-  .navbar-menu {
-    display: none;
-    width: 100%;
-    margin-top: 1rem;
-  }
-  
-  .navbar-menu.active {
-    display: block;
-  }
-  
-  .navbar-nav {
-    flex-direction: column;
-    gap: 0.5rem;
-    width: 100%;
-  }
-  
-  .nav-item {
-    width: 100%;
-  }
-  
-  .nav-link, .btn-outline-light {
-    width: 100%;
-    display: block;
-  }
+/* =========================
+   BOTÓN CTA (BASE)
+========================= */
+
+.cta-btn {
+  background-color: var(--white);
+  color:antiquewhite;
+  border: none;
+  padding: 1rem 2.5rem;
+  font-size: 4rem; /* corregido */
+  font-weight: 800;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px ;
+  background-color:darkgrey;
+  color: var(--white);
+}
+
+/* =========================
+   CTA ADAPTADO AL NAVBAR
+========================= */
+
+.navbar {
+  background-color: #377741;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.navbar h1 {
+  color: antiquewhite;
+  margin: 0;
+  font-size: 2rem;
+}
+
+.navbar-actions {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar .cta-btn {
+  padding: 0.45rem 1.2rem;
+  font-size: 0.9rem;
+  border-radius: 999px;
+  box-shadow: none;
+  transform: none;
+}
+
+.navbar .cta-btn:hover {
+  transform: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* =========================
+   SECCIONES
+========================= */
+
+.section {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section h2 {
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.section p {
+  text-align: center;
+  color: var(--gray);
+  margin-bottom: 3rem;
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* =========================
+   GRID
+========================= */
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.step-card {
+  background: var(--white);
+  padding: 2.5rem 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  text-align: center;
+  transition: transform 0.3s ease;
+  border-top: 4px solid var(--primary);
+}
+
+.step-card:hover {
+  transform: translateY(-5px);
+}
+
+.step-card h3 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.step-card p {
+  color: var(--gray);
+  line-height: 1.6;
 }
