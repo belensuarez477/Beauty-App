@@ -1,0 +1,55 @@
+.private-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 2.5rem;
+ background-color: #1a6926;
+  color: antiquewhite;
+}
+
+.brand {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 6rem;
+  font-size: 1.5rem;
+}
+
+.nav-links a {
+  color: antiquewhite;
+  text-decoration: none;
+}
+
+.user-menu {
+  position: relative;
+}
+
+.user-menu button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #111; /* color del ícono */
+  font-size: 1.5rem;
+}
+
+.dropdown {
+  position: absolute;
+  right: 0;
+  top: 2.5rem;
+  background: white;
+  color: black;
+  border-radius: 4px;
+  padding: 0.5rem;
+}

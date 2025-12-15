@@ -1,0 +1,15 @@
+/* Contenedor principal */
+:host {
+  display: block;
+  padding: 2rem;
+  background-color: #f5f7fa;
+}
+
+/* Espaciado entre secciones */
+app-profile-header,
+app-quick-actions,
+app-today-appointments,
+app-services-summary {
+  display: block;
+  margin-bottom: 2rem;
+}

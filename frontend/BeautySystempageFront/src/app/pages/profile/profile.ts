@@ -1,11 +1,14 @@
 import { Component } from '@angular/core';
+import { NavbarPerfilUsuario } from "../../component/navbar/navbar";
+import { RouterOutlet } from "@angular/router";
+import { Footer } from "../../component/footer/footer";
 
 @Component({
   selector: 'app-profile',
-  standalone: true,
-  imports: [],
+ standalone: true,
+  imports: [RouterOutlet, NavbarPerfilUsuario, Footer],
   templateUrl: './profile.html',
-  styleUrl: './profile.css',
+  styleUrl: './profile.css',  
 })
 export class Profile {
  mensajeBienvenida = '';

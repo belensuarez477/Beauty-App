@@ -1,0 +1,14 @@
+<section class="services-summary">
+  <h3>Servicios activos</h3>
+
+  <ul>
+    <li *ngFor="let service of services">
+      {{ service }}
+    </li>
+  </ul>
+
+  <a routerLink="/perfil-usuario/gestion-servicios">
+    Gestionar servicios
+  </a>
+</section>
+

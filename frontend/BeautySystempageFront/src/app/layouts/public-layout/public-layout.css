@@ -1,0 +1,36 @@
+/* Reset básico */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+/* Contenedor raíz */
+app-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ESTE es el empujador real del footer */
+.layout-content {
+  flex: 1;          /* 🔑 NO 10 */
+  padding: 2rem;
+}
+
+/* Página de formulario */
+.form-page {
+  display: flex;
+  justify-content: center;   /* solo horizontal */
+}
+
+/* Formulario */
+.form-page form {
+  width: 100%;
+  max-width: 420px;
+  margin-top: 4rem;
+}
+
+/* Footer SIN márgenes */
+footer {
+  margin: 0;
+}

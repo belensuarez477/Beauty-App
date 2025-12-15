@@ -1,36 +1,10 @@
 <nav class="navbar">
-  <!-- Marca -->
-  <a class="navbar-brand" routerLink="/">Beauty System</a>
-  
-  <div class="navbar-menu" [class.active]="isMenuOpen">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" 
-           routerLink="/" 
-           routerLinkActive="active" 
-           [routerLinkActiveOptions]="{ exact: true }">
-          Inicio
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" 
-           routerLink="/contactanos" 
-           routerLinkActive="active">
-          Contáctanos
-        </a>
-      </li>
-      <li class="nav-item auth-buttons">
-        <a class="btn-outline-light" 
-           routerLink="/inicio-sesion" 
-           routerLinkActive="active">
-          Iniciar Sesión
-        </a>
-        <a class="btn-outline-light" 
-           routerLink="/registrarse" 
-           routerLinkActive="active">
-          Registrarse
-        </a>
-      </li>
-    </ul>
-  </div>
+  <h1>BeautySystem</h1>
+
+  <ul class="navbar-actions">
+    <li><a routerLink="/" class="cta-btn">Inicio</a></li>
+    <li><a routerLink="/inicio-sesion" class="cta-btn">Iniciar sesión</a></li>
+    <li><a routerLink="/registrarse" class="cta-btn">Registrarse</a></li>
+    <li><a routerLink="/contactanos" class="cta-btn">Contactanos</a></li>
+  </ul>
 </nav>

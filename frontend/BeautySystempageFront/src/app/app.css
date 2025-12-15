@@ -1,12 +1,10 @@
-.body {
+body {
   margin: 0;
   font-family: 'Arial', sans-serif;
   background-color: #f4fdf6;
   color: #333;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
 }
+
 .navbar {
   background-color: #377741;
   padding: 15px;
@@ -27,22 +25,18 @@
 }
 
 
-.contenido {
-  flex: 1; 
-  padding: 20px;
-}
-
-
 footer {
   background-color: #377741;
-  padding: 15px;
+  width: 100%;
+  padding: 0.75rem 2rem;
+  box-sizing: border-box;
+
   display: flex;
   justify-content: center;
   align-items: center;
+
   color: antiquewhite;
-  min-height: 80px;
-  margin-top: auto; 
-  width: 100%;
+  font-size: 0.9rem;
 }
 
 

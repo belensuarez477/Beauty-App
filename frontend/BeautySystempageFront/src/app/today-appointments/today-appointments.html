@@ -1,0 +1,12 @@
+<section class="today-appointments">
+  <h3>Turnos de hoy</h3>
+
+  <div *ngFor="let a of appointments">
+    <strong>{{ a.time }}</strong> –
+    {{ a.client }} – {{ a.service }}
+    <span>({{ a.status }})</span>
+  </div>
+
+  <a routerLink="/perfil-usuario/turnero">Ver agenda completa</a>
+</section>
+

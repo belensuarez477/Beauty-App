@@ -1,0 +1,21 @@
+<nav class="private-navbar">
+  <div class="brand">
+    BeautySystem
+  </div>
+
+  <ul class="nav-links">
+    <li><a routerLink="/perfil-usuario">Inicio</a></li>
+    <li><a routerLink="/perfil-usuario/turnero">Turnos</a></li>
+    <li><a routerLink="/perfil-usuario/gestion-servicios">Servicios</a></li>
+    <li><a routerLink="/contactanos">Contacto</a></li>
+  </ul>
+
+  <div class="user-menu">
+    <button (click)="toggleMenu()">👤</button>
+
+    <div class="dropdown" *ngIf="menuOpen">
+      <button (click)="logout()">Cerrar sesión</button>
+    </div>
+  </div>
+</nav>
+
