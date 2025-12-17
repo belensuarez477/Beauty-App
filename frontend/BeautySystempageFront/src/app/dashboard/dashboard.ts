@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavbarPerfilUsuario } from '../component/navbar/navbar';
 import { QuickActions } from '../quick-actions/quick-actions';
-import { TodayAppointments } from '../today-appointments/today-appointments';
+import { TodayAppointments } from '../today-appointments/today-appointments'
 import { ServicesSummary } from '../services-summary/services-summary';
 import { ProfileHeader } from '../component/profile-header/profile-header';
 import { Footer } from "../component/footer/footer";
@@ -14,5 +14,5 @@ import { Footer } from "../component/footer/footer";
   styleUrls: ['./dashboard.css'] 
 })
 export class Dashboard {
-
+  userName = '';
 }

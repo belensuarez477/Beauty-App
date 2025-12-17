@@ -1,15 +1,125 @@
-/* Contenedor principal */
 :host {
-  display: block;
-  padding: 2rem;
-  background-color: #f5f7fa;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  color: #333;
 }
 
-/* Espaciado entre secciones */
+.dashboard-main {
+  flex: 1;
+  padding: 2.5rem;
+  background-color: #faf7f2;
+  
+}
+
+/* Espaciado entre secciones (SIN tocar tipografía) */
 app-profile-header,
 app-quick-actions,
 app-today-appointments,
 app-services-summary {
   display: block;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
+}
+
+app-footer {
+  margin-top: auto;
+}
+
+/* ===================== */
+/* ACCIONES (CARDS) */
+/* ===================== */
+
+.dashboard-actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+  justify-items: center;
+  align-items: stretch;
+}
+
+/* Card */
+.dashboard-card {
+  background-color: #ffffff;
+  padding: 2.5rem;
+  border-radius: 16px;
+  text-decoration: none;
+  border: 1px solid #eaeaea;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+
+  min-height: 220px;
+  width: 100%;
+  max-width: 480px;
+
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.06),
+    0 1px 3px rgba(0, 0, 0, 0.08);
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  border: 1px solid #eaeaea;
+   padding: 2rem;
+  border-radius: 14px;
+  text-decoration: none;
+}
+
+/* Título de card */
+.dashboard-card h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #1a6926;
+  margin: 0;
+}
+
+/* Texto de card */
+.dashboard-card p {
+  font-size: 1.05rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* Acción */
+.action-link {
+  margin-top: auto;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a6926;
+}
+
+/* Hover */
+.dashboard-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+   background-color: #fdfdfd;
+   transform: translateY(-2px);
+   box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+   transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease;
+
+}
+
+/* Accesibilidad */
+.dashboard-card:focus-visible {
+  outline: 2px solid #1a6926;
+  outline-offset: 4px;
+}
+footer {
+  background-color: #1a6926;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:antiquewhite;
+  min-height: 80px;  
+  margin-top: auto; 
+  width: 100%;
+  box-sizing: border-box;
+  height: 110px; 
+  
+ 
+}footer p {
+  margin: 0;
+  font-size: 1rem;
 }

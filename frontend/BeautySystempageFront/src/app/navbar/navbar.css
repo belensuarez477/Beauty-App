@@ -60,22 +60,25 @@
 /* =========================
    CTA ADAPTADO AL NAVBAR
 ========================= */
-
 .navbar {
   background-color: #377741;
-  padding: 30px;
+  min-height: 96px;              /* 🔑 altura clara */
+  padding: 0.5rem;               /* aire horizontal */
+  
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
 }
 
+
 .navbar h1 {
   color: antiquewhite;
   margin: 0;
-  font-size: 2rem;
+  font-size: 3rem;             /* antes 2rem */
+  font-weight: 700;
+  letter-spacing: 0.5px;
 }
-
 .navbar-actions {
   list-style: none;
   display: flex;
@@ -86,7 +89,7 @@
 
 .navbar .cta-btn {
   padding: 0.45rem 1.2rem;
-  font-size: 0.9rem;
+  font-size: 3rem;
   border-radius: 999px;
   box-shadow: none;
   transform: none;

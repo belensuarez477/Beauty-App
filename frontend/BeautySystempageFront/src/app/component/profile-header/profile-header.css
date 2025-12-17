@@ -1,16 +1,37 @@
 .profile-header {
-  background: white;
-  padding: 1.5rem 2rem;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  /* Ocupa todo el ancho del viewport */
+  width: 100vw;
+  max-width: 100vw;
+
+  /* Saca la card de los paddings del contenedor padre */
+  margin-left: calc(-50vw + 50%);
+  margin-right: 0;
+  margin-top: 0;
+
+  background: #ffffff;
+  padding: 3rem 4.5rem;
+
+  /* Estilo visual */
+  border-radius: 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+
+  display: block;
 }
 
+/* Título */
 .profile-header h2 {
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 4.5rem;
+  color: #000;
+  text-align: center;
 }
 
+/* Subtítulo */
 .profile-header p {
   margin-top: 0.5rem;
   color: #666;
+  font-size: 3.5rem;
+  text-align:left;
+  
 }
+

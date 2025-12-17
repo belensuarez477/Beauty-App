@@ -1,21 +1,24 @@
 <nav class="private-navbar">
-  <div class="brand">
-    BeautySystem
-  </div>
+  <div class="brand">BeautySystem</div>
 
-  <ul class="nav-links">
-    <li><a routerLink="/perfil-usuario">Inicio</a></li>
-    <li><a routerLink="/perfil-usuario/turnero">Turnos</a></li>
-    <li><a routerLink="/perfil-usuario/gestion-servicios">Servicios</a></li>
-    <li><a routerLink="/contactanos">Contacto</a></li>
-  </ul>
+  <div class="navbar-right">
+    <div class="user-menu" (click)="$event.stopPropagation()">
+      <!-- Botón usuario -->
+      <button
+        class="user-button"
+        type="button"
+        (click)="toggleMenu()"
+        aria-label="Menú de usuario"
+      >
+        👤
+      </button>
 
-  <div class="user-menu">
-    <button (click)="toggleMenu()">👤</button>
-
-    <div class="dropdown" *ngIf="menuOpen">
-      <button (click)="logout()">Cerrar sesión</button>
+      <!-- Dropdown -->
+      <div class="dropdown" *ngIf="menuAbierto()">
+        <button class="logout-btn" (click)="cerrarSesion()">
+          Cerrar sesión
+        </button>
+      </div>
     </div>
   </div>
 </nav>
-

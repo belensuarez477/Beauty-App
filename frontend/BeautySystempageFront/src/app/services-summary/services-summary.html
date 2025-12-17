@@ -1,14 +1,38 @@
-<section class="services-summary">
-  <h3>Servicios activos</h3>
+<section class="services-summary"> 
 
-  <ul>
-    <li *ngFor="let service of services">
-      {{ service }}
-    </li>
-  </ul>
+  <!-- Servicios del día -->
+  <div class="card card-today">
+    <h3>Servicios de hoy</h3>
+    <ul>
+      <li *ngFor="let service of serviciosHoy">
+        ✨ {{ service }}
+      </li>
+    </ul>
+  </div>
 
-  <a routerLink="/perfil-usuario/gestion-servicios">
-    Gestionar servicios
-  </a>
+  <!-- Servicios activos -->
+  <div class="card card-active">
+    <h3>Servicios activos</h3>
+    <ul>
+      <li
+        *ngFor="let service of servicesActivos"
+        class="service-item"
+      >
+        <span class="service-name">{{ service }}</span>
+
+        <span
+          class="service-count"
+          [ngClass]="{
+            'disponible-alto': turnosDisponibles[service] >= 4,
+            'disponible-medio': turnosDisponibles[service] >= 2 && turnosDisponibles[service] < 4,
+            'disponible-bajo': turnosDisponibles[service] < 2
+          }"
+          title="Turnos disponibles hoy"
+        >
+          ⏰ {{ turnosDisponibles[service] }} disponibles
+        </span>
+      </li>
+    </ul>
+  </div>
+
 </section>
-

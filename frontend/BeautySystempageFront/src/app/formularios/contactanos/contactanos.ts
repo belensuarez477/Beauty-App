@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { Footer } from '../../component/footer/footer';
 
 @Component({
   standalone: true,
   selector: 'app-contactanos',
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule, Footer],
   templateUrl: './contactanos.html'
 })
 export class Contactanos {
