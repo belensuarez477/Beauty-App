@@ -1,19 +1,32 @@
 .quick-actions {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
   gap: 1rem;
+  padding: 1.5rem;
+  font-size: 2rem;
+  padding: 1.5rem;
+  margin: 4rem auto;
+
+  width: 100%;
+ 
 }
+
 
 .quick-actions a {
   background: white;
-  padding: 1.25rem;
-  border-radius: 12px;
+  padding: 1.80rem;
+  border-radius: 18px;
   text-align: center;
   text-decoration: none;
   color: #333;
   font-weight: 600;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s ease;
+  font-size: 3.7rem;
+  min-height: 160px; 
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
 .quick-actions a:hover {

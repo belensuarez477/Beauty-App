@@ -1,33 +1,46 @@
 .today-appointments {
-  background: white;
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin-top: 15rem;
+  padding: 1rem;
+  margin-bottom: 12rem;
 }
 
-.today-appointments h3 {
-  margin-bottom: 1rem;
+.appointment-card {
+  background: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  margin-bottom: 2rem;
+
+  /* Flexbox para separar info y estado */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.today-appointments div {
-  padding: 0.75rem 0;
-  border-bottom: 1px solid #eee;
-  font-size: 0.95rem;
+.today-appointments h3{
+  font-size: 4.5rem;
+  padding: 1.8rem 0;
+}
+.appointment-info {
+  font-size: 4rem;
+  color: #333;
+  
 }
 
-.today-appointments div:last-child {
-  border-bottom: none;
-}
-
-.today-appointments span {
-  color: #999;
-  margin-left: 0.5rem;
-}
-
-.today-appointments a {
-  display: inline-block;
-  margin-top: 1rem;
-  text-decoration: none;
-  color: #377741;
+.status {
+  font-size: 4rem;
   font-weight: 600;
+}
+
+/* Colores por estado */
+.status.confirmed {
+  color: #2e7d32; /* verde */
+}
+
+.status.pending {
+  color: #f57c00; /* naranja */
+}
+
+.status.cancelled {
+  color: #c62828; /* rojo */
 }

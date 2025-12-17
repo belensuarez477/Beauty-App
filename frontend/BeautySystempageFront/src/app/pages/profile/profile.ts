@@ -11,18 +11,28 @@ import { Footer } from "../../component/footer/footer";
   styleUrl: './profile.css',  
 })
 export class Profile {
- mensajeBienvenida = '';
+  mensajeBienvenida = 'Hola';
+  nombreUsuario = '';
 
   ngOnInit() {
+    // Obtener nombre del usuario / estética
+    this.nombreUsuario = localStorage.getItem('nombreUsuario') || 'Usuario';
+
     const registroExitoso = localStorage.getItem('registroExitoso');
     if (registroExitoso === 'true') {
-      this.mensajeBienvenida = 'Registro exitoso ✅ Bienvenido a Beauty System';
-      localStorage.removeItem('registroExitoso'); // limpiar flag
+      this.mensajeBienvenida = `Registro exitoso ✅ Bienvenido/a ${this.nombreUsuario}`;
+      localStorage.removeItem('registroExitoso');
+      return;
     }
-     const loginExitoso = localStorage.getItem('loginExitoso');
-     if (loginExitoso === 'true') {
-    this.mensajeBienvenida = 'Inicio de sesión exitoso ✅ Bienvenido a Beauty System';
-    localStorage.removeItem('loginExitoso');
-  }
+
+    const loginExitoso = localStorage.getItem('loginExitoso');
+    if (loginExitoso === 'true') {
+      this.mensajeBienvenida = `Inicio de sesión exitoso ✅ Bienvenido/a ${this.nombreUsuario}`;
+      localStorage.removeItem('loginExitoso');
+      return;
+    }
+
+    // Mensaje por defecto (cuando ya está logueado)
+    this.mensajeBienvenida = `Hola ${this.nombreUsuario}`;
   }
 }

@@ -9,5 +9,14 @@ import { Component } from '@angular/core';
   styleUrl: './services-summary.css',
 })
 export class ServicesSummary {
-services = ['Depilación', 'Limpieza facial', 'Masajes'];
+
+  serviciosHoy = ['Depilación']; // ❗ no se toca
+  servicesActivos = ['Depilación', 'Limpieza facial', 'Masajes'];
+
+  // Turnos disponibles por servicio
+  turnosDisponibles: Record<string, number> = {
+    'Depilación': 3,
+    'Limpieza facial': 5,
+    'Masajes': 2
+  };
 }

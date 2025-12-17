@@ -1,10 +1,10 @@
-body {
-  margin: 0;
-  font-family: 'Arial', sans-serif;
-  background-color: #f4fdf6;
-  color: #333;
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
+/* Navbar */
 .navbar {
   background-color: #377741;
   padding: 15px;
@@ -24,22 +24,12 @@ body {
   gap: 20px;
 }
 
-
-footer {
-  background-color: #377741;
-  width: 100%;
-  padding: 0.75rem 2rem;
-  box-sizing: border-box;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  color: antiquewhite;
-  font-size: 0.9rem;
+/* Contenido principal */
+.main-content {
+  flex: 1;
 }
 
-
+/* Responsive */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
@@ -49,10 +39,5 @@ footer {
   .navbar ul {
     flex-direction: column;
     align-items: center;
-  }
-
-  footer {
-    flex-direction: column;
-    text-align: center;
   }
 }
