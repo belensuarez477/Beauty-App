@@ -1,18 +1,35 @@
 import { Component } from '@angular/core';
-import { NavbarPerfilUsuario } from '../component/navbar/navbar';
+import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 import { QuickActions } from '../quick-actions/quick-actions';
-import { TodayAppointments } from '../today-appointments/today-appointments'
-import { ServicesSummary } from '../services-summary/services-summary';
-import { ProfileHeader } from '../component/profile-header/profile-header';
-import { Footer } from "../component/footer/footer";
+import { TurnosService } from '../services/turnos-service/turnos-service';
 
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [ProfileHeader, QuickActions, TodayAppointments, ServicesSummary, NavbarPerfilUsuario, Footer],
+  imports: [
+    CommonModule,
+    QuickActions
+],
   templateUrl: './dashboard.html',
-  styleUrls: ['./dashboard.css'] 
+  styleUrls: ['./dashboard.css']
 })
 export class Dashboard {
-  userName = '';
+
+  mostrarCalendario = false;
+
+  constructor(private router: Router) {}
+
+  abrirCalendario() {
+    this.mostrarCalendario = true;
+  }
+
+  cerrarCalendario() {
+    this.mostrarCalendario = false;
+  }
+
+  irAGestionTurno(fecha: string) {
+    this.mostrarCalendario = false;
+    this.router.navigate(['/perfil-usuario/turnero', fecha]);
+  }
 }

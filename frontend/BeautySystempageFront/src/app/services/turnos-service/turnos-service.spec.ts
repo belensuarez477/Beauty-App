@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { provideRouter } from '@angular/router';
 
-import { GestionServicios } from './gestion-servicios';
+import { TurnosService } from './turnos-service';
 
-describe('GestionServicios', () => {
-  let component: GestionServicios;
-  let fixture: ComponentFixture<GestionServicios>;
+describe('TurnosService', () => {
+  let component: TurnosService;
+  let fixture: ComponentFixture<TurnosService>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [GestionServicios]
+      imports: [TurnosService]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(GestionServicios);
+    fixture = TestBed.createComponent(TurnosService);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

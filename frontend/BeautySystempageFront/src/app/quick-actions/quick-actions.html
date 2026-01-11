@@ -1,4 +1,5 @@
 <section class="quick-actions">
-  <a routerLink="/perfil-usuario/turnero" title="Gestionar turno">➕ Nuevo turno</a>
-  <a routerLink="/perfil-usuario/gestion-servicios" title="Gestionar servicio">💅 Nuevo servicio</a>
+  <button type="button" (click)="nuevoTurno.emit()">
+    ➕ Nuevo turno
+  </button>
 </section>

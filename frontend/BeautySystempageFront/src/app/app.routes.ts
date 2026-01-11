@@ -1,16 +1,17 @@
-import { Routes } from "@angular/router"; 
-import { Contactanos } from "./formularios/contactanos/contactanos";
-import { InicioSesion } from "./formularios/inicio-sesion/inicio-sesion";
-import { Registrarse } from "./formularios/registrarse/registrarse";
-import { GestionServicios } from "./gestion-servicios/gestion-servicios";
-import { GestionTurnos } from "./gestion-turnos/gestion-turnos";
-import { Home } from "./home/home";
+import { Routes } from "@angular/router";
+import { Dashboard } from "./dashboard/dashboard";;
 import { PrivateLayout } from "./layouts/private-layout/private-layout";
 import { PublicLayout } from "./layouts/public-layout/public-layout";
-import { Dashboard } from "./dashboard/dashboard";
+import { Home } from "./home/home";
+import { InicioSesion } from "./formularios/inicio-sesion/inicio-sesion";
+import { Registrarse } from "./formularios/registrarse/registrarse";
+import { Contactanos } from "./formularios/contactanos/contactanos";
+import { SeleccionFechaHoraComponent } from "./turnos/seleccion-fechahora/seleccion-fechahora";
+import { TurnosService } from "../app/services/turnos-service/turnos-service";
 
 export const routes: Routes = [
-  // Rutas públicas
+
+  // Públicas
   {
     path: '',
     component: PublicLayout,
@@ -18,18 +19,21 @@ export const routes: Routes = [
       { path: '', component: Home },
       { path: 'inicio-sesion', component: InicioSesion },
       { path: 'registrarse', component: Registrarse },
-      { path: 'contactanos', component: Contactanos },
+      { path: 'contactanos', component: Contactanos }
     ]
   },
 
-  // Rutas privadas (perfil del usuario)
+  // Privadas
   {
     path: 'perfil-usuario',
     component: PrivateLayout,
     children: [
-      { path: '', component: Dashboard }, // dashboard principal
-      { path: 'turnero', component: GestionTurnos },
-      { path: 'gestion-servicios', component: GestionServicios }
+      { path: 'dashboard', component: Dashboard },
+
+      { path: 'turnos/seleccionar', component: SeleccionFechaHoraComponent },
+      { path: 'turnos/nuevo', component: TurnosService },
+
+      { path: '', redirectTo: 'dashboard', pathMatch: 'full' }
     ]
   }
 ];

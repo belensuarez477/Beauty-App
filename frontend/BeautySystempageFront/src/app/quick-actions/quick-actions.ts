@@ -1,13 +1,11 @@
-import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-quick-actions',
   standalone: true,
-  imports: [RouterModule],
   templateUrl: './quick-actions.html',
-  styleUrl: './quick-actions.css',
+  styleUrls: ['./quick-actions.css']
 })
 export class QuickActions {
-
+  @Output() nuevoTurno = new EventEmitter<void>();
 }

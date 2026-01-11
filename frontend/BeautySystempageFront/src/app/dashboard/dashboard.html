@@ -1,13 +1,14 @@
-<app-navbarPerfilUsuario></app-navbarPerfilUsuario>
+<app-quick-actions
+  (nuevoTurno)="abrirCalendario()">
+</app-quick-actions>
 
-<main class="dashboard-main">
-  <app-profile-header></app-profile-header>
+<!-- MODAL CALENDARIO -->
+<div class="modal-overlay" *ngIf="mostrarCalendario">
+  <div class="modal">
+    <app-calendario-turnos
+      (fechaSeleccionada)="irAGestionTurno($event)">
+    </app-calendario-turnos>
 
-  <app-quick-actions></app-quick-actions>
-
-  <app-today-appointments></app-today-appointments>
-
-  <app-services-summary></app-services-summary>
-</main>
-
-<app-footer></app-footer>
+    <button (click)="cerrarCalendario()">Cerrar</button>
+  </div>
+</div>

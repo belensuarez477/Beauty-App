@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 @Component({
   standalone: true,
   selector: 'app-registrarse',
-  imports: [FormsModule, CommonModule],
+  imports: [ CommonModule, FormsModule ],
   templateUrl: './registrarse.html'
 })
 export class Registrarse {
